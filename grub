@@ -1,0 +1,21 @@
+# Useful start up grub command when linux does not start up.
+
+# step 1: list all disks and find out location of /boot
+
+grub> ls
+(hd0) (hd0,gpt0) (hd0,gpt1) (hd0,gpt2)
+
+grub> ls (hd0,1)/
+/bin /boot /dev /etc /lib /usr
+
+# step 2: load lunux kernel and mount at /dev where (hdx,gpty)->/dev/sdxy
+
+grub> linux (hd0,1)/boot/vmlinuz-4.19.0-9-amd64 root=/dev/sda1
+
+# step 3: initrd
+
+grub> initrd (hd0,1)/boot/initrd-4.19.0-9-amd64
+
+# step 4: boot
+
+grub> boot
