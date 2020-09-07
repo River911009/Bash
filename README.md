@@ -47,6 +47,9 @@
     	$sudo apt update
     	$sudo apt install winehq-stable
 
+    8. Desktop enviroments and service:
+        $sudo tasksel
+
 
     /**
      * deb installation:
