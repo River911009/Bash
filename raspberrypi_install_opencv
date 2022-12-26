@@ -1,5 +1,9 @@
+sudo apt-get update
+
+sudo apt-get upgrade -y
+
+sudo apt-get install libatlas-base-dev
+
 pip install opencv-python
 
 pip install --upgrade numpy
-
-sudo apt-get install libatlas-base-dev
